@@ -24,6 +24,11 @@ function check_new_update_block(){
 		},function(){
 			$(this).removeClass("block_focus");
 		});
+		new_update_blocks.find("a[href*='/repaste/']").click(function(event){
+			console.log($(this).attr("title"));
+			preview_open($(this).attr("href"), $(this).attr("title"));
+			event.preventDefault();
+		});
 		new_update_blocks.find("a[href^='/repaste/']").click(function(event){
 			console.log($(this).attr("title"));
 			preview_open($(this).attr("href"), $(this).attr("title"));
@@ -49,6 +54,11 @@ function inject_preview_div(){
 
 function rebind_link_event(){
 	console.log("rebind link event");
+	$(".srl a[href*='/repaste/']").click(function(event){
+		console.log($(this).attr("title"));
+		preview_open($(this).attr("href"), $(this).attr("title"));
+		event.preventDefault();
+	});
 	$(".srl a[href^='/repaste/']").click(function(event){
 		console.log($(this).attr("title"));
 		preview_open($(this).attr("href"), $(this).attr("title"));

@@ -1,6 +1,6 @@
 {
 	"name": "开心转贴预览",
-	"version": "1.4",
+	"version": "1.5",
 	"description": "点击转贴链接，直接在该页预览内容",
 	"permissions": [
 		"http://*/*",
